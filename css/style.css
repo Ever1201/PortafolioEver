@@ -1,0 +1,424 @@
+:root {
+  --primary-color: #004080;
+  --accent-color: #00b4d8;
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.hero {
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+}
+
+.job h3 {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 0.2rem;
+}
+
+.job ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 6px var(--card-shadow);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#typewriter::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+  text-align: left;
+  max-width: 600px;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Animación elegante de entrada */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-item {
+  margin-bottom: 1.5em;
+}
+
+.education-item i {
+  color: #b48f72; /* champagne o algún tono elegante */
+  margin-right: 0.5em;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 1.5em;
+  padding-left: 1.5em;
+  border-left: 3px solid #b48f72; /* línea vertical en tono champagne */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -1.3em;
+  top: 0;
+  background-color: #fff;
+  color: #b48f72;
+  border: 2px solid #b48f72;
+  border-radius: 50%;
+  padding: 0.3em;
+  font-size: 1em;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-content {
+  background: #f9f5f0;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.2em 0;
+  font-weight: 600;
+}
+
+.timeline-date {
+  font-size: 0.9em;
+  color: #b48f72;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    width: 95%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    width: 70%;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  section {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 2000px) {
+  .container {
+    width: 60%;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  section {
+    padding: 3rem;
+  }
+}
+@media (min-width: 2400px) {
+  .container {
+    width: 50%;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  section {
+    padding: 3.5rem;
+  }
+}
+@media (min-width: 2800px) {
+  .container {
+    width: 40%;
+  }
+
+  .hero h1 {
+    font-size: 5rem;
+  }
+
+  section {
+    padding: 4rem;
+  }
+}
+@media (min-width: 3200px) {
+  .container {
+    width: 30%;
+  }
+
+  .hero h1 {
+    font-size: 5.5rem;
+  }
+
+  section {
+    padding: 4.5rem;
+  }
+}
+@media (min-width: 3600px) {
+  .container {
+    width: 25%;
+  }
+
+  .hero h1 {
+    font-size: 6rem;
+  }
+
+  section {
+    padding: 5rem;
+  }
+}
+@media (min-width: 4000px) {
+  .container {
+    width: 20%;
+  }
+
+  .hero h1 {
+    font-size: 6.5rem;
+  }
+
+  section {
+    padding: 5.5rem;
+  }
+}
+@media (min-width: 4400px) {
+  .container {
+    width: 15%;
+  }
+
+  .hero h1 {
+    font-size: 7rem;
+  }
+
+  section {
+    padding: 6rem;
+  }
+}
+@media (min-width: 4800px) {
+  .container {
+    width: 10%;
+  }
+
+  .hero h1 {
+    font-size: 7.5rem;
+  }
+
+  section {
+    padding: 6.5rem;
+  }
+}
+@media (min-width: 5200px) {
+  .container {
+    width: 5%;
+  }
+
+  .hero h1 {
+    font-size: 8rem;
+  }
+
+  section {
+    padding: 7rem;
+  }
+}
+@media (min-width: 5600px) {
+  .container {
+    width: 4%;
+  }
+
+  .hero h1 {
+    font-size: 8.5rem;
+  }
+
+  section {
+    padding: 7.5rem;
+  }
+}

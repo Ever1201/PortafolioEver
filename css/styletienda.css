@@ -1,0 +1,176 @@
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+/* Banner Principal */
+.banner {
+  background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), url('imgtienda/banner.jpg') no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Secciones */
+section {
+  padding: 2rem 1rem;
+  background-color: white;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.productos-galeria {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productos-galeria img {
+  width: 150px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.productos-galeria img:hover {
+  transform: scale(1.1);
+}
+
+.productos-galeria .btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.productos-galeria .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Logos Marcas */
+.logos-marcas {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logos-marcas img {
+  width: 100px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logos-marcas img:hover {
+  opacity: 1;
+}
+
+/* Ubicación */
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+footer .redes-sociales a {
+  margin: 0 0.5rem;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer .redes-sociales a:hover {
+  color: #007bff;
+}
+
