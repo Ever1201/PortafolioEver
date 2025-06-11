@@ -67,3 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach(el => observer.observe(el));
 });
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',        // idioma original de tu página
+      includedLanguages: 'es,en', // idiomas disponibles
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
